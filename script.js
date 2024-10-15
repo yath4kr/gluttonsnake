@@ -17,13 +17,13 @@ document.addEventListener("keydown", changeDirection);
 
 function changeDirection(event) {
   const keyPressed = event.key;
-  if (keyPressed === "ArrowUp" && direction.y === 0) {
+  if ((keyPressed === "ArrowUp" || KeyPressed === "W") && direction.y === 0) {
     direction = { x: 0, y: -box };
-  } else if (keyPressed === "ArrowDown" && direction.y === 0) {
+  } else if ((keyPressed === "ArrowDown" || KeyPressed == "S") && direction.y === 0) {
     direction = { x: 0, y: box };
-  } else if (keyPressed === "ArrowLeft" && direction.x === 0) {
+  } else if ((keyPressed === "ArrowLeft" || KeyPressed == "A") && direction.x === 0) {
     direction = { x: -box, y: 0 };
-  } else if (keyPressed === "ArrowRight" && direction.x === 0) {
+  } else if ((keyPressed === "ArrowRight" || keyPressed === "D") && direction.x === 0) {
     direction = { x: box, y: 0 };
   }
 }
